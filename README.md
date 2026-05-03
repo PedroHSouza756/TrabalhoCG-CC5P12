@@ -49,10 +49,16 @@ O projeto foi estruturado no padrão **MVC (Model-View-Controller)**, separando 
 
 ```
 /
-├── main.py          # Ponto de entrada — inicializa o pygame e mantém o loop principal
-├── model.py         # Estado da figura e toda a matemática (matrizes, geração de vértices)
-├── view.py          # Renderização na tela (figura, eixos, HUD)
-└── controller.py    # Leitura do teclado e atualização do model
+├── main.py                    # Ponto de entrada — inicializa o pygame e mantém o loop principal
+└──model                       # Estado da figura e toda a matemática (matrizes, geração de vértices)
+  ├── config.py
+  ├── figura.py
+  ├── geometria.py
+  ├── transformacoes.py
+└──view
+  ├── view_figura.py          # Renderização na tela (figura, eixos, HUD)
+└──controller
+  ├── controller_figura.py    # Leitura do teclado e atualização do model
 ```
 
 ### Por que MVC?
